@@ -1,13 +1,29 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO App</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container center">
+      <h1 class="center title">My TODO App</h1>
+	  <hr><br>
+      <div class="flow-right controls">
+	  
+        <span><b>Item count: </b><span id="item-count">0</span></span>
+        <span><b>Unchecked count: </b><span id="unchecked-count">0</span></span>
+      </div>
+	  <br><br>
+      <button class="button center" onClick="newTodo()"><b>New TODO</b></button>
+      <ul id="todo-list" class="todo-list"></ul>
+	  
+		<center><div class="footer">
+		<p><b>Footer</b></p>
+		</div></center>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+    </div>
+	
+    <script src="./script.js"></script>
+	
+  </body>
+</html>
